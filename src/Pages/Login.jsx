@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-
+import { Form, Button, FloatingLabel } from 'react-bootstrap'
 import { createUser } from '../services/userAPI';
 import LoadingElement from '../Components/LoadingElement';
+import './Login.css';
 
 class Login extends Component {
   constructor() {
@@ -48,25 +49,34 @@ class Login extends Component {
     return (
       isLogged ? <Redirect to="/search" /> : (
         <div data-testid="page-login">
-          <form>
-            <label htmlFor="userName">
-              Name:
-              <input
-                data-testid="login-name-input"
-                name="userName"
-                type="text"
-                onChange={ this.handleChanges }
-              />
-            </label>
-            <button
-              data-testid="login-submit-button"
-              type="button"
-              disabled={ isDisabled }
-              onClick={ this.handleSubmit }
-            >
-              Entrar
-            </button>
-          </form>
+          <div className="header-container">
+            <h1>Trybetunes</h1>
+          </div>
+          <Form className="formgroup-container">
+            <Form.Group className="mb-3 form-container">
+              <FloatingLabel
+                label="Name:"
+                controlId="floatingInput"
+                className="mb-3"
+              >
+                <Form.Control
+                  data-testid="login-name-input"
+                  name="userName"
+                  type="text"
+                  onChange={ this.handleChanges }
+                />
+              </FloatingLabel>
+              <Button
+              variant="outline-secondary"
+                data-testid="login-submit-button"
+                type="button"
+                disabled={ isDisabled }
+                onClick={ this.handleSubmit }
+              >
+                Entrar
+              </Button>
+            </Form.Group>
+          </Form>
           {isLoading ? <LoadingElement /> : null}
         </div>
       )

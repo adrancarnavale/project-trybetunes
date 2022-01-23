@@ -1,0 +1,33 @@
+.formgroup-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 50%;
+  margin-top: 20px;
+  flex-grow: 1;
+}
+
+.form-container Button {
+  width: 30%;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  flwx-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.header-container h1 {
+  font-size: 56px;
+  color: green;
+}
