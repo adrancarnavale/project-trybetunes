@@ -1,0 +1,32 @@
+.user-name-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.user-name {
+  font-size: 48px;
+  font-weight: bold;
+  color: green;
+}
+
+.links-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.links-container div {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  background-color: green;
+  padding: 10px;
+  border-radius: 10%;
+}

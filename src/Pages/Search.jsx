@@ -3,6 +3,8 @@ import Header from '../Components/Header';
 import LoadingElement from '../Components/LoadingElement';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import AlbumsFound from '../Components/AlbumsFound';
+import { InputGroup, FormControl, Button } from 'react-bootstrap';
+import './Search.css';
 
 class Search extends Component {
   constructor() {
@@ -54,25 +56,30 @@ class Search extends Component {
         <Header />
         {
           isLoading ? <LoadingElement /> : (
-            <div>
-              <label htmlFor="artistInput">
-                <input
-                  data-testid="search-artist-input"
-                  name="artistInput"
-                  type="text"
-                  placeholder="Nome do Artista"
-                  onChange={ this.handleChanges }
-                  value={ artistInput }
-                />
-              </label>
-              <button
+            <div className="component-container">
+              <div className="artist-input-container">
+                <InputGroup className="mb-3">
+                  <InputGroup.Text id="basic-addon1">Artista</InputGroup.Text>
+                  <FormControl
+                    placeholder="Nome do Artista"
+                    aria-label="Username"
+                    aria-describedby="basic-addon1"
+                    onChange={ this.handleChanges }
+                    value={ artistInput }
+                  />
+                </InputGroup>
+              </div>
+              <Button
+                className="artist-search-button"
+                variant="secondary"
+                size="lg"
                 data-testid="search-artist-button"
                 type="button"
                 disabled={ isDisabled }
                 onClick={ this.handleClick }
               >
                 Pesquisar
-              </button>
+              </Button>
             </div>
           )
         }

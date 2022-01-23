@@ -1,0 +1,13 @@
+.component-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.artist-input-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 50%;
+  justify-content: center;
+  margin: 40px 10px 20px 10px;
+}
