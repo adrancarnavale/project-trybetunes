@@ -5,6 +5,7 @@ import getMusics from '../services/musicsAPI';
 import MusicCard from '../Components/MusicCard';
 import { getFavoriteSongs, addSong, removeSong } from '../services/favoriteSongsAPI';
 import LoadingElement from '../Components/LoadingElement';
+import './Album.css';
 
 class Album extends Component {
   constructor() {
@@ -75,7 +76,7 @@ class Album extends Component {
       artistName,
       albunName, albunImg, listOfMusics, isLoading } = this.state;
     const pageElement = (
-      <div>
+      <div className="album-container">
         <h1 data-testid="artist-name">{ artistName }</h1>
         <h2 data-testid="album-name">{ albunName }</h2>
         <img src={ albunImg } alt={ albunName } />
@@ -95,7 +96,7 @@ class Album extends Component {
     );
 
     return (
-      <div data-testid="page-album">
+      <div className="album-component-container">
         <Header />
         {
           isLoading ? <LoadingElement /> : pageElement

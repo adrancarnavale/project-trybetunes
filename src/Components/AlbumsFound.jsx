@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import './AlbumsFound.css';
 
 class AlbumsFound extends Component {
   render() {
     const { albumsFound, artist } = this.props;
     return (
       albumsFound.length > 0 ? (
-        <div>
+        <div className="results-container">
           <p>{ `Resultado de álbuns de: ${artist}` }</p>
-          <ul>
+          <ul className="result-items-container">
             {
               albumsFound.map((album) => (
-                <li key={ album.collectionId }>
+                <li className="result-item" key={ album.collectionId }>
                   <h4>{ album.collectionName }</h4>
                   <img src={ album.artworkUrl100 } alt="" />
                   <Link
+                    className="result-link"
                     data-testid={ `link-to-album-${album.collectionId}` }
                     to={ `/album/${album.collectionId}` }
                   >

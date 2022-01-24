@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './MusicCard.css';
 
 class MusicCard extends Component {
   render() {
     const { trackId, trackName, previewUrl, isChecked, handleChanges } = this.props;
 
     const content = (
-      <div>
+      <div className="music-card-container">
         <h4>{ trackName }</h4>
         <audio
           data-testid="audio-component"
@@ -20,7 +21,7 @@ class MusicCard extends Component {
         <label
           htmlFor={ trackId }
         >
-          Favorita
+          Favorita:
           <input
             data-testid={ `checkbox-music-${trackId}` }
             type="checkbox"

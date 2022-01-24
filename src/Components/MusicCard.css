@@ -1,0 +1,15 @@
+.music-card-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.music-card-container label {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.music-card-container input {
+  margin-left: 5px;
+}

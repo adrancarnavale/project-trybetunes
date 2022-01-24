@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { getUser, updateUser } from '../services/userAPI';
 import LoadingElement from '../Components/LoadingElement';
 import Header from '../Components/Header';
+import './ProfileEdit.css';
 
 class ProfileEdit extends Component {
   constructor() {
@@ -75,7 +76,7 @@ class ProfileEdit extends Component {
       isLoading, userName, userEmail, userImage, userDescription, redirect } = this.state;
 
     const profileEditComponent = (
-      <form>
+      <form className="profile-edit-form">
         <label htmlFor="username">
           Nome:
           <input
@@ -97,7 +98,7 @@ class ProfileEdit extends Component {
           />
         </label>
         <label htmlFor="userEmail">
-          Descrição
+          Descrição:
           <textarea
             data-testid="edit-input-description"
             name="userDescription"
@@ -118,8 +119,10 @@ class ProfileEdit extends Component {
           />
         </label>
         <button
+          variant="sucess"
+          className="form-button"
           data-testid="edit-button-save"
-          type="button"
+          type="submit"
           disabled={ this.checkButton() }
           onClick={ this.handleClick }
         >

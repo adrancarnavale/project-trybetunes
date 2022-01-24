@@ -1,0 +1,31 @@
+.profile-edit-form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.profile-edit-form input {
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.profile-edit-form textarea {
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.profile-edit-form label:nth-child(3) {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-button {
+  margin-top: 10px;
+  background-color: green;
+  padding: 5px 20px;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 3px 3px 3px grey;
+}

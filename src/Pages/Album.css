@@ -1,0 +1,17 @@
+.album-component-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.album-container {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.album-container img {
+  width: 120px;
+  border-radius: 50%;
+}
